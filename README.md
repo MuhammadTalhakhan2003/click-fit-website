@@ -40,7 +40,7 @@ cd click-fit-website
 npm install
 
 # 3. Set up MySQL database
-mysql -u root -p < database.sql
+mysql -u root -p < users.sql
 
 # 4. Start the backend server
 node app.js
@@ -60,7 +60,7 @@ click-fit-website/
 ├── 🎨 style.css               # CSS styles and animations
 ├── ⚡ script.js               # Frontend JavaScript (jQuery, AJAX, drag & drop)
 ├── 🔧 app.js                  # Node.js backend server
-├── 🗄️ database.sql           # MySQL database schema and procedures
+├── 🗄️ users.sql           # MySQL database schema and procedures
 ├── 📦 package.json           # Node.js dependencies
 ├── 📁 upload_images/         # Image upload directory
 └── 📖 README.md              # This file
@@ -142,7 +142,7 @@ CREATE PROCEDURE addUser(
 | API Integration | Load page | "Fitness Fact" section displays API data |
 | Drag & Drop | Drag image to upload area | Preview appears, upload completes |
 | Error Handling | Click non-home links | Error modal appears |
-| Database | Import database.sql | Tables and stored procedures created |
+| Database | Import users.sql | Tables and stored procedures created |
 
 ### **Quick Test Commands**
 ```bash
@@ -166,7 +166,7 @@ CREATE DATABASE click_fit_db;
 USE click_fit_db;
 
 -- Import schema
-SOURCE database.sql;
+SOURCE users.sql;
 ```
 
 2. **Node.js Server Configuration**:
